@@ -26,6 +26,7 @@
 		0A718B671959E9EA00EADD8B /* pink.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A718B5D1959E9EA00EADD8B /* pink.png */; };
 		0A718B681959E9EA00EADD8B /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A718B5E1959E9EA00EADD8B /* purple.png */; };
 		0A718B691959E9EA00EADD8B /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A718B5F1959E9EA00EADD8B /* yellow.png */; };
+		0AA32BE319799A4100211298 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA32BE219799A4100211298 /* bar.png */; };
 		0AEC26201968EF6F00D832CF /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC261F1968EF6F00D832CF /* WelcomeViewController.m */; };
 		1669E51C166ED05F00C535A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51B166ED05F00C535A9 /* UIKit.framework */; };
 		1669E51E166ED05F00C535A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51D166ED05F00C535A9 /* Foundation.framework */; };
@@ -78,6 +79,7 @@
 		0A718B5D1959E9EA00EADD8B /* pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pink.png; sourceTree = "<group>"; };
 		0A718B5E1959E9EA00EADD8B /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purple.png; sourceTree = "<group>"; };
 		0A718B5F1959E9EA00EADD8B /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
+		0AA32BE219799A4100211298 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		0AEC261E1968EF6F00D832CF /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		0AEC261F1968EF6F00D832CF /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		1669E517166ED05F00C535A9 /* Firechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +194,7 @@
 				0A718B581959E9EA00EADD8B /* graphite.png */,
 				0A718B591959E9EA00EADD8B /* green.png */,
 				0A718B5A1959E9EA00EADD8B /* grey_2.png */,
+				0AA32BE219799A4100211298 /* bar.png */,
 				0A718B5B1959E9EA00EADD8B /* grey.png */,
 				0A718B5C1959E9EA00EADD8B /* orange.png */,
 				0A718B5D1959E9EA00EADD8B /* pink.png */,
@@ -294,6 +297,7 @@
 				1669E530166ED05F00C535A9 /* Default@2x.png in Resources */,
 				0A718B671959E9EA00EADD8B /* pink.png in Resources */,
 				0A718B631959E9EA00EADD8B /* green.png in Resources */,
+				0AA32BE319799A4100211298 /* bar.png in Resources */,
 				0A5736001958B09900B9D485 /* button6.png in Resources */,
 				0A718B621959E9EA00EADD8B /* graphite.png in Resources */,
 				0A718B681959E9EA00EADD8B /* purple.png in Resources */,
