@@ -161,6 +161,8 @@ int bubble_x, bubble_y;
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.backgroundColor = [UIColor colorWithRed:236/255.0 green:240/255.0 blue:241/255.0 alpha:1.0];
+        //rgb(236, 240, 241)
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
         balloonView = [[UIImageView alloc] initWithFrame:CGRectZero];
@@ -181,14 +183,14 @@ int bubble_x, bubble_y;
         name.tag = 3;
         name.numberOfLines = 0;
         name.lineBreakMode = UILineBreakModeWordWrap;
-        name.font = [UIFont systemFontOfSize:9.0];
+        name.font = [UIFont systemFontOfSize:12.0];
         
         time = [[UILabel alloc] initWithFrame:CGRectZero];
         time.backgroundColor = [UIColor clearColor];
         time.tag = 5;
         time.numberOfLines = 0;
         time.lineBreakMode = UILineBreakModeWordWrap;
-        time.font = [UIFont systemFontOfSize:9.0];
+        time.font = [UIFont systemFontOfSize:8.0];
         
         UIView *message = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, cell.frame.size.width, cell.frame.size.height)];
         message.tag = 0;
@@ -213,17 +215,16 @@ int bubble_x, bubble_y;
     
     NSDictionary *text = [self.chat objectAtIndex:indexPath.row];
     CGSize size = [text[@"text"] sizeWithFont:[UIFont systemFontOfSize:14.0] constrainedToSize:CGSizeMake(240.0f, 480.0f) lineBreakMode:UILineBreakModeWordWrap];
-    CGSize size2 = [text[@"name"] sizeWithFont:[UIFont systemFontOfSize:9.0] constrainedToSize:CGSizeMake(240.0f, 480.0f) lineBreakMode:UILineBreakModeWordWrap];
+    CGSize size2 = [text[@"name"] sizeWithFont:[UIFont systemFontOfSize:12.0] constrainedToSize:CGSizeMake(240.0f, 480.0f) lineBreakMode:UILineBreakModeWordWrap];
+    
     
     UIImage *balloon;
     UIImage *barimage;
+    UIImage *balloon2;
+
 
     
-    float messagewidth = size.width + 23;
-    if(size2.width + 20 > messagewidth)
-    {
-        messagewidth = size2.width + 23;
-    }
+    
     
     NSString *unix = text[@"time"];
     //NSDate* today = [NSDate date];
@@ -240,26 +241,60 @@ int bubble_x, bubble_y;
   //  NSTimeInterval ti = [today timeIntervalSince1970];
     
     NSString *unixtime = [[NSDate dateWithTimeIntervalSince1970:unixint] description];
-
-
     
-    if(text[@"name"] == self.name)
+    NSDate* date = [NSDate dateWithTimeIntervalSince1970:unixint];
+
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    
+    NSString *string = [dateFormatter stringFromDate:date];
+    
+    NSString *stringtoday = [dateFormatter stringFromDate:[NSDate date]];
+    
+    if([string isEqualToString:stringtoday])
+    {
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"hh:mm a"];
+        string = [formatter stringFromDate:date];
+        
+        
+    }
+
+    CGSize size3 = [string sizeWithFont:[UIFont systemFontOfSize:7.0] constrainedToSize:CGSizeMake(240.0f, 480.0f) lineBreakMode:UILineBreakModeWordWrap];
+    
+    float messagewidth = size.width + 23;
+    if(size2.width + 20 > messagewidth)
+    {
+        messagewidth = size2.width + 23;
+    }
+    if(size3.width + 28 > messagewidth)
+    {
+        messagewidth = size3.width + 28;
+    }
+    
+    
+    
+    
+    if([text[@"name"] isEqualToString:self.name])
     {
         
-        balloonView.frame = CGRectMake(320.0f - (size.width + 28.0f), 2.0f - 1, size.width + 28.0f, size.height + 18.0f);
-        balloon = [[UIImage imageNamed:@"green.png"] stretchableImageWithLeftCapWidth:24 topCapHeight:15];
+        balloonView.frame = CGRectMake(320.0f - (size.width + 28.0f), 2.0f - 1, size.width + 28.0f, size.height + 28.0f);
+        balloon = [[UIImage imageNamed:@"green.png"] stretchableImageWithLeftCapWidth:10 topCapHeight:20];
         label.frame = CGRectMake(307.0f - (size.width + 5.0f), 8.0f, size.width + 5.0f, size.height);
         //name.frame = CGRectMake(307.0f - (size.width + 5.0f), -8.0f, 200, 20);
     }
     else
     {
-        balloonView.frame = CGRectMake(5.0, 2.0 - 1 , messagewidth, size.height + 28);
-        balloon = [[UIImage imageNamed:@"grey_2.png"] stretchableImageWithLeftCapWidth:24 topCapHeight:15];
+        balloonView.frame = CGRectMake(5.0, -1 , messagewidth, size.height + 40);
+        balloon = [[UIImage imageNamed:@"grey_2.png"] stretchableImageWithLeftCapWidth:20 topCapHeight:20];
+        
+       
+        
         label.frame = CGRectMake(20, 18, messagewidth + 5, size.height);
         name.frame = CGRectMake(20, 0, 200, 20);
-        time.frame = CGRectMake(25 + messagewidth, 18, 200, 20);
+        time.frame = CGRectMake(messagewidth - size3.width - 9, 33, 200, 20);
         
-        bar.frame = CGRectMake(18.0, 15 , messagewidth - 22, 1);
+        bar.frame = CGRectMake(18.0, 17 , messagewidth - 22, 1);
         barimage = [[UIImage imageNamed:@"bar.png"] stretchableImageWithLeftCapWidth:1 topCapHeight:1];
         
     }
@@ -268,9 +303,32 @@ int bubble_x, bubble_y;
     balloonView.image = balloon;
     label.text = text[@"text"];
     name.text = text[@"name"];
-    time.text = unixtime;
+    time.text = string;
+    UIColor* graycolor = [UIColor colorWithRed:189.0/255.0 green:195/255.0 blue:199/255.0 alpha:1.0];
+    [time setTextColor:graycolor];
     UIColor* color = [UIColor colorWithRed:(39/255.0) green:(174/255.0) blue:(96/255.0) alpha:1.0];
     [name setTextColor:color];
+    
+    if([text[@"name"] isEqualToString:self.name])
+    {
+        name.text = @"";
+        [time setTextColor:[UIColor whiteColor]];
+        [label setTextColor:[UIColor whiteColor]];
+        
+        int posx = 320 - size.width - 15;
+        if(posx > 320 - (size3.width + 15))
+        {
+            posx = 320 - (size3.width + 15);
+        }
+        
+        time.frame = CGRectMake(posx, 21, 200, 20);
+
+
+    }
+    else
+    {
+        [label setTextColor:[UIColor blackColor]];
+    }
 
     
     return cell;
@@ -302,7 +360,7 @@ int bubble_x, bubble_y;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *body = [self.chat objectAtIndex:indexPath.row];
     CGSize size = [body[@"text"] sizeWithFont:[UIFont systemFontOfSize:14.0] constrainedToSize:CGSizeMake(240.0, 480.0) lineBreakMode:UILineBreakModeWordWrap];
-    return size.height + 25;
+    return size.height + 38;
 }
 
 
