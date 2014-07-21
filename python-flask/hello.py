@@ -48,6 +48,10 @@ def checkNumberRegister(number):
             check = number in smsUsersArray
             if check == False: 
                 smsUsersArray.append(number)
+                # if (len(smsUsersArray) == 2):
+                # 	print "A number is now registered, we can delete that blank array index"
+                # 	del smsUsersArray[0]
+
                 smsUsers.set(smsUsersArray)
             
 
@@ -56,10 +60,13 @@ def updateSMSUsers(currentUser, message):
     for x in range(1, len(smsUsersArray)):
         if (smsUsersArray[x] != currentUser):
             # print smsUsersArray
-        	print "Sending SMS message..."
+        	print "Sending SMS message to"
+        	print smsUsersArray[x] if smsUsersArray[x] else "Unknown. Twilio did not recieve the recipient's phone number."
 
         	messageString = " - ".join([currentUser, message])
-        	smsMessage = client.messages.create(to=smsUsersArray[x], from_="+14806481956", body=messageString)
+
+        	if (smsUsersArray[x]):
+	        	smsMessage = client.messages.create(to=smsUsersArray[x], from_="+14806481956", body=messageString)
 
 
 
