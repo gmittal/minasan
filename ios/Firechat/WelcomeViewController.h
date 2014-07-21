@@ -10,4 +10,5 @@
 
 @interface WelcomeViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *handle;
 @end

@@ -43,7 +43,7 @@ int bubble_x, bubble_y;
     self.firebase = [[Firebase alloc] initWithUrl:kFirechatNS];
     
     // Pick a random number between 1-1000 for our username.
-    self.name = @"Kevin";
+    self.name = [[NSUserDefaults standardUserDefaults] stringForKey:@"name"];
     [nameField setTitle:self.name forState:UIControlStateNormal];
     
     [self exceed];
@@ -90,6 +90,8 @@ int bubble_x, bubble_y;
                 {
                     self.name = [message substringFromIndex:6];
                     [nameField setTitle:self.name forState:UIControlStateNormal];
+                    
+                    [self.tableView reloadData];
                 }
             }
         }
@@ -107,6 +109,19 @@ int bubble_x, bubble_y;
         [[self.firebase childByAutoId] setValue:@{@"name" : self.name, @"text": aTextField.text, @"time": [NSString stringWithFormat:@"%d",ti]}];
         
         //sdpasjdpas
+        
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc]
+                                        initWithURL:[NSURL
+                                                     URLWithString:@"http://stormy-ocean-4893.herokuapp.com/nosms"]];
+        
+        [request setHTTPMethod:@"POST"];
+        //[request setValue:self.name forKeyPath:@"userName"];
+        NSString* params = [NSString stringWithFormat:@"userName=%@&messageBody=%@",self.name,aTextField.text];
+        [request setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
+        
+        NSURLConnection * postOutput =[[NSURLConnection alloc]
+                                       initWithRequest:request
+                                       delegate:self];
 
         
     }
