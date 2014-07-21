@@ -56,7 +56,7 @@ def updateSMSUsers(currentUser, message):
     for x in range(1, len(smsUsersArray)):
         if (smsUsersArray[x] != currentUser):
             # print smsUsersArray
-        	print " ".join(['Sending SMS to', smsUsersArray[x]])
+        	print "Sending SMS message..."
 
         	messageString = " - ".join([currentUser, message])
         	smsMessage = client.messages.create(to=smsUsersArray[x], from_="+14806481956", body=messageString)
