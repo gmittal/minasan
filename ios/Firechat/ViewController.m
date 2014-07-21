@@ -105,6 +105,8 @@ int bubble_x, bubble_y;
 
         
         [[self.firebase childByAutoId] setValue:@{@"name" : self.name, @"text": aTextField.text, @"time": [NSString stringWithFormat:@"%d",ti]}];
+        
+        //sdpasjdpas
 
         
     }
@@ -215,6 +217,10 @@ int bubble_x, bubble_y;
     
     NSDictionary *text = [self.chat objectAtIndex:indexPath.row];
     CGSize size = [text[@"text"] sizeWithFont:[UIFont systemFontOfSize:14.0] constrainedToSize:CGSizeMake(240.0f, 480.0f) lineBreakMode:UILineBreakModeWordWrap];
+    
+    CGSize sizeLong = [text[@"text"] sizeWithFont:[UIFont systemFontOfSize:14.0] constrainedToSize:CGSizeMake(265.0f, 480.0f) lineBreakMode:UILineBreakModeWordWrap];
+    
+    
     CGSize size2 = [text[@"name"] sizeWithFont:[UIFont systemFontOfSize:12.0] constrainedToSize:CGSizeMake(240.0f, 480.0f) lineBreakMode:UILineBreakModeWordWrap];
     
     
@@ -257,6 +263,10 @@ int bubble_x, bubble_y;
         [formatter setDateFormat:@"hh:mm a"];
         string = [formatter stringFromDate:date];
         
+        if([[string substringToIndex:1] isEqualToString:@"0"])
+        {
+            string = [string substringFromIndex:1];
+        }
         
     }
 
@@ -272,29 +282,34 @@ int bubble_x, bubble_y;
         messagewidth = size3.width + 28;
     }
     
+    float messagewidthtext = messagewidth;
     
+    if(messagewidth > 239)
+    {
+        messagewidthtext = sizeLong.width + 23;
+    }
     
     
     if([text[@"name"] isEqualToString:self.name])
     {
         
-        balloonView.frame = CGRectMake(320.0f - (size.width + 28.0f), 2.0f - 1, size.width + 28.0f, size.height + 28.0f);
+        balloonView.frame = CGRectMake(320.0f - (messagewidth + 5), 2.0f - 1, messagewidth + 5, size.height + 28.0f);
         balloon = [[UIImage imageNamed:@"green.png"] stretchableImageWithLeftCapWidth:10 topCapHeight:20];
-        label.frame = CGRectMake(307.0f - (size.width + 5.0f), 8.0f, size.width + 5.0f, size.height);
+        label.frame = CGRectMake(307.0f - (messagewidth - 17.0f), 8.0f, size.width + 5.0f, size.height);
         //name.frame = CGRectMake(307.0f - (size.width + 5.0f), -8.0f, 200, 20);
     }
     else
     {
-        balloonView.frame = CGRectMake(5.0, -1 , messagewidth, size.height + 40);
+        balloonView.frame = CGRectMake(5.0, -1 , messagewidthtext, size.height + 40);
         balloon = [[UIImage imageNamed:@"grey_2.png"] stretchableImageWithLeftCapWidth:20 topCapHeight:20];
         
        
         
         label.frame = CGRectMake(20, 18, messagewidth + 5, size.height);
         name.frame = CGRectMake(20, 0, 200, 20);
-        time.frame = CGRectMake(messagewidth - size3.width - 9, 33, 200, 20);
+        time.frame = CGRectMake(messagewidthtext - size3.width - 9, size.height + 16, 200, 20);
         
-        bar.frame = CGRectMake(18.0, 17 , messagewidth - 22, 1);
+        bar.frame = CGRectMake(18.0, 17 , messagewidthtext - 21, 1);
         barimage = [[UIImage imageNamed:@"bar.png"] stretchableImageWithLeftCapWidth:1 topCapHeight:1];
         
     }
@@ -315,13 +330,13 @@ int bubble_x, bubble_y;
         [time setTextColor:[UIColor whiteColor]];
         [label setTextColor:[UIColor whiteColor]];
         
-        int posx = 320 - size.width - 15;
-        if(posx > 320 - (size3.width + 15))
+        int posx = 320 - size.width - 18;
+        if(posx > 320 - (size3.width + 25))
         {
-            posx = 320 - (size3.width + 15);
+            posx = 320 - (size3.width + 25);
         }
         
-        time.frame = CGRectMake(posx, 21, 200, 20);
+        time.frame = CGRectMake(posx, size.height + 6, 200, 20);
 
 
     }
@@ -360,7 +375,13 @@ int bubble_x, bubble_y;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *body = [self.chat objectAtIndex:indexPath.row];
     CGSize size = [body[@"text"] sizeWithFont:[UIFont systemFontOfSize:14.0] constrainedToSize:CGSizeMake(240.0, 480.0) lineBreakMode:UILineBreakModeWordWrap];
-    return size.height + 38;
+    
+    if([body[@"name"] isEqualToString:self.name])
+    {
+            return size.height + 30;
+    }
+    
+    return size.height + 40;
 }
 
 
