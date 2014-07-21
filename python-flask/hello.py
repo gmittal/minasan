@@ -11,15 +11,13 @@ from firebase import Firebase
 import json
 from pprint import pprint
 #from firebasin import Firebase
-import ws4py
-
+# import ws4py
+import os
 
 # Find these values at https://twilio.com/user/account
 account_sid = "ACba498d91d1312e0f4975eaac513d64be"
 auth_token = "7c2bacbc7a9783c496e4af1af1a51a0b"
 client = TwilioRestClient(account_sid, auth_token)
- 
-
 
 
 firebaseUrl = 'https://ping-im.firebaseio.com/kevin/' #chat room URL
@@ -57,7 +55,10 @@ def checkNumberRegister(number):
 def updateSMSUsers(currentUser, message):
     for x in range(1, len(smsUsersArray)):
         if (smsUsersArray[x] != currentUser):
-        	messageString = currentUser + ": " + message
+            # print smsUsersArray
+        	print " ".join(['Sending SMS to', smsUsersArray[x]])
+
+        	messageString = " - ".join([currentUser, message])
         	smsMessage = client.messages.create(to=smsUsersArray[x], from_="+14806481956", body=messageString)
 
 
@@ -83,7 +84,8 @@ def hello_monkey():
     if (r):
     	print "Successfully pushed to the database."
 
-    updateSMSUsers(user_number, body)
+    if (user_number):
+        updateSMSUsers(user_number, body)
     
 
     return "I don't think you should be here. Please leave." # No need for a response...
@@ -101,9 +103,17 @@ def no_sms():
 	print name
 	print body
 
-	updateSMSUsers(name, body)
+	if (name):
+		if (body):
+			updateSMSUsers(name, body)
 
 	return "I don't think you should be here. Please leave."
+
+
  
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+
+
