@@ -112,7 +112,7 @@ int bubble_x, bubble_y;
         
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc]
                                         initWithURL:[NSURL
-                                                     URLWithString:@"http://stormy-ocean-4893.herokuapp.com/nosms"]];
+                                                     URLWithString:@"http://stormy-ocean-4893.herokuapp.com/n osms"]];
         
         [request setHTTPMethod:@"POST"];
         //[request setValue:self.name forKeyPath:@"userName"];

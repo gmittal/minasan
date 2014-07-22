@@ -267,6 +267,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Firebase;
+				TargetAttributes = {
+					1669E516166ED05F00C535A9 = {
+						DevelopmentTeam = EHP752TB4K;
+					};
+				};
 			};
 			buildConfigurationList = 1669E511166ED05F00C535A9 /* Build configuration list for PBXProject "Firechat" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -449,6 +454,7 @@
 		1669E554166ED05F00C535A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yohan Frans (2929FN3KFH)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -466,6 +472,7 @@
 		1669E555166ED05F00C535A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yohan Frans (2929FN3KFH)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
