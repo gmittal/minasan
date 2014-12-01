@@ -54,6 +54,8 @@ int bubble_x, bubble_y;
         // Reload the table view so the new message will show up.
         [self.tableView reloadData];
         
+        //NSLog(@"thing");
+        
         [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.chat.count-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
         //[self.tableView setContentOffset:CGPointMake(0, CGFLOAT_MAX)];
     }];
@@ -112,11 +114,17 @@ int bubble_x, bubble_y;
         
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc]
                                         initWithURL:[NSURL
-                                                     URLWithString:@"http://stormy-ocean-4893.herokuapp.com/n osms"]];
+                                                     URLWithString:@"http://stormy-ocean-4893.herokuapp.com/nosms"]];
         
         [request setHTTPMethod:@"POST"];
         //[request setValue:self.name forKeyPath:@"userName"];
-        NSString* params = [NSString stringWithFormat:@"userName=%@&messageBody=%@",self.name,aTextField.text];
+        
+        
+        NSString* params = [NSString stringWithFormat:@"userName=%@&messageBody=%@&token=%@",
+                            self.name,aTextField.text,[[NSUserDefaults standardUserDefaults] stringForKey:@"deviceToken"]];
+        
+        NSLog(params);
+        
         [request setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
         
         NSURLConnection * postOutput =[[NSURLConnection alloc]
@@ -136,6 +144,30 @@ int bubble_x, bubble_y;
 {
     // We only have one section in our table view.
     return 1;
+}
+
+
+-(void) smsDevice
+{
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]
+                                    initWithURL:[NSURL
+                                                 URLWithString:@"http://stormy-ocean-4893.herokuapp.com/registerDeviceTokens"]];
+    
+    [request setHTTPMethod:@"POST"];
+    //[request setValue:self.name forKeyPath:@"userName"];
+    
+    
+    NSString* params = [NSString stringWithFormat:@"deviceToken=%@",
+                        [[NSUserDefaults standardUserDefaults] stringForKey:@"deviceToken"]];
+    
+    NSLog(params);
+    NSLog([[NSUserDefaults standardUserDefaults] stringForKey:@"deviceToken"]);
+    
+    [request setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLConnection * postOutput =[[NSURLConnection alloc]
+                                   initWithRequest:request
+                                   delegate:self];
 }
 
 - (NSInteger)tableView:(UITableView*)table numberOfRowsInSection:(NSInteger)section
@@ -290,7 +322,10 @@ int bubble_x, bubble_y;
     float messagewidth = size.width + 23;
     if(size2.width + 20 > messagewidth)
     {
-        messagewidth = size2.width + 23;
+        if(![text[@"name"] isEqualToString:self.name])
+        {
+            messagewidth = size2.width + 23;
+        }
     }
     if(size3.width + 28 > messagewidth)
     {

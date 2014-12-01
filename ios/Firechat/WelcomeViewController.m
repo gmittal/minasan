@@ -16,6 +16,8 @@
 @implementation WelcomeViewController
 
 @synthesize handle;
+@synthesize handleLabel;
+
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,7 +41,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    CGSize screenSize = screenBound.size;
+    CGFloat screenWidth = screenSize.width;
+    CGFloat screenHeight = screenSize.height;
+    NSLog(@"%f",screenHeight);
+    
     handle.delegate = self;
+    handle.frame = CGRectMake(handle.frame.origin.x, screenHeight - 200,handle.frame.size.width,handle.frame.size.height);
+    handleLabel.frame = CGRectMake(handle.frame.origin.x, screenHeight - 300,handle.frame.size.width,handle.frame.size.height);
+    
+    [self.view frame];
     
 }
 

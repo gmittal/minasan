@@ -41,6 +41,29 @@
     newToken = [newToken stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     NSLog(newToken);
+    [[NSUserDefaults standardUserDefaults] setObject:newToken forKey:@"deviceToken"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]
+                                    initWithURL:[NSURL
+                                                 URLWithString:@"http://stormy-ocean-4893.herokuapp.com/registerDeviceTokens"]];
+    
+    [request setHTTPMethod:@"POST"];
+    //[request setValue:self.name forKeyPath:@"userName"];
+    
+    
+    NSString* params = [NSString stringWithFormat:@"deviceToken=%@",
+                        newToken];
+    
+    NSLog(params);
+    NSLog([[NSUserDefaults standardUserDefaults] stringForKey:@"deviceToken"]);
+    
+    [request setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLConnection * postOutput =[[NSURLConnection alloc]
+                                   initWithRequest:request
+                                   delegate:self];
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
