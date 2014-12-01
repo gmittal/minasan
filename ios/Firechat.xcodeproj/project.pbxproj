@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A10A44A1979D2880052946B /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A10A4491979D2880052946B /* green.png */; };
+		0A12FDF81986F41300DC5DC1 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A12FDF71986F41300DC5DC1 /* login.png */; };
+		0A12FDFA1986F47D00DC5DC1 /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A12FDF91986F47D00DC5DC1 /* signup.png */; };
 		0A5735FB1958B09900B9D485 /* button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5735F21958B09900B9D485 /* button1.png */; };
 		0A5735FC1958B09900B9D485 /* button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5735F31958B09900B9D485 /* button2.png */; };
 		0A5735FD1958B09900B9D485 /* button3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5735F41958B09900B9D485 /* button3.png */; };
@@ -27,6 +29,9 @@
 		0A718B681959E9EA00EADD8B /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A718B5E1959E9EA00EADD8B /* purple.png */; };
 		0A718B691959E9EA00EADD8B /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A718B5F1959E9EA00EADD8B /* yellow.png */; };
 		0AA32BE319799A4100211298 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA32BE219799A4100211298 /* bar.png */; };
+		0ABAAE031986C0E2003B5882 /* ohhCity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0ABAAE021986C0E2003B5882 /* ohhCity.jpg */; };
+		0ABAAE061986D02A003B5882 /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABAAE051986D02A003B5882 /* TitleViewController.m */; };
+		0ABAAE081986D298003B5882 /* realCity.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ABAAE071986D298003B5882 /* realCity.png */; };
 		0AEC26201968EF6F00D832CF /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC261F1968EF6F00D832CF /* WelcomeViewController.m */; };
 		1669E51C166ED05F00C535A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51B166ED05F00C535A9 /* UIKit.framework */; };
 		1669E51E166ED05F00C535A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51D166ED05F00C535A9 /* Foundation.framework */; };
@@ -61,6 +66,8 @@
 
 /* Begin PBXFileReference section */
 		0A10A4491979D2880052946B /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		0A12FDF71986F41300DC5DC1 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		0A12FDF91986F47D00DC5DC1 /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup.png; sourceTree = "<group>"; };
 		0A5735F21958B09900B9D485 /* button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button1.png; sourceTree = "<group>"; };
 		0A5735F31958B09900B9D485 /* button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button2.png; sourceTree = "<group>"; };
 		0A5735F41958B09900B9D485 /* button3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button3.png; sourceTree = "<group>"; };
@@ -80,6 +87,10 @@
 		0A718B5E1959E9EA00EADD8B /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purple.png; sourceTree = "<group>"; };
 		0A718B5F1959E9EA00EADD8B /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
 		0AA32BE219799A4100211298 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
+		0ABAAE021986C0E2003B5882 /* ohhCity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ohhCity.jpg; sourceTree = "<group>"; };
+		0ABAAE041986D02A003B5882 /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
+		0ABAAE051986D02A003B5882 /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
+		0ABAAE071986D298003B5882 /* realCity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realCity.png; sourceTree = "<group>"; };
 		0AEC261E1968EF6F00D832CF /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		0AEC261F1968EF6F00D832CF /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		1669E517166ED05F00C535A9 /* Firechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +186,8 @@
 				1669E52A166ED05F00C535A9 /* AppDelegate.h */,
 				1669E52B166ED05F00C535A9 /* AppDelegate.m */,
 				1669E533166ED05F00C535A9 /* iPhone.storyboard */,
+				0ABAAE041986D02A003B5882 /* TitleViewController.h */,
+				0ABAAE051986D02A003B5882 /* TitleViewController.m */,
 				0AEC261E1968EF6F00D832CF /* WelcomeViewController.h */,
 				0AEC261F1968EF6F00D832CF /* WelcomeViewController.m */,
 				1669E539166ED05F00C535A9 /* ViewController.h */,
@@ -189,6 +202,10 @@
 		1669E522166ED05F00C535A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0A12FDF91986F47D00DC5DC1 /* signup.png */,
+				0A12FDF71986F41300DC5DC1 /* login.png */,
+				0ABAAE071986D298003B5882 /* realCity.png */,
+				0ABAAE021986C0E2003B5882 /* ohhCity.jpg */,
 				0A718B561959E9EA00EADD8B /* aqua.png */,
 				0A718B571959E9EA00EADD8B /* brown.png */,
 				0A718B581959E9EA00EADD8B /* graphite.png */,
@@ -267,6 +284,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = Firebase;
+				TargetAttributes = {
+					1669E516166ED05F00C535A9 = {
+						DevelopmentTeam = EHP752TB4K;
+					};
+				};
 			};
 			buildConfigurationList = 1669E511166ED05F00C535A9 /* Build configuration list for PBXProject "Firechat" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -299,18 +321,22 @@
 				0AA32BE319799A4100211298 /* bar.png in Resources */,
 				0A5736001958B09900B9D485 /* button6.png in Resources */,
 				0A718B621959E9EA00EADD8B /* graphite.png in Resources */,
+				0ABAAE031986C0E2003B5882 /* ohhCity.jpg in Resources */,
 				0A718B681959E9EA00EADD8B /* purple.png in Resources */,
 				0A718B651959E9EA00EADD8B /* grey.png in Resources */,
 				0A718B611959E9EA00EADD8B /* brown.png in Resources */,
 				1669E532166ED05F00C535A9 /* Default-568h@2x.png in Resources */,
+				0A12FDF81986F41300DC5DC1 /* login.png in Resources */,
 				0A5736011958B09900B9D485 /* button7.png in Resources */,
 				1669E535166ED05F00C535A9 /* iPhone.storyboard in Resources */,
 				0A5735FE1958B09900B9D485 /* button4.png in Resources */,
 				0A718B641959E9EA00EADD8B /* grey_2.png in Resources */,
+				0ABAAE081986D298003B5882 /* realCity.png in Resources */,
 				0A5735FD1958B09900B9D485 /* button3.png in Resources */,
 				0A5735FB1958B09900B9D485 /* button1.png in Resources */,
 				0A5735FC1958B09900B9D485 /* button2.png in Resources */,
 				0A718B601959E9EA00EADD8B /* aqua.png in Resources */,
+				0A12FDFA1986F47D00DC5DC1 /* signup.png in Resources */,
 				0A10A44A1979D2880052946B /* green.png in Resources */,
 				0A5736021958B09900B9D485 /* button8.png in Resources */,
 				0A5735FF1958B09900B9D485 /* button5.png in Resources */,
@@ -350,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AEC26201968EF6F00D832CF /* WelcomeViewController.m in Sources */,
+				0ABAAE061986D02A003B5882 /* TitleViewController.m in Sources */,
 				1669E528166ED05F00C535A9 /* main.m in Sources */,
 				1669E52C166ED05F00C535A9 /* AppDelegate.m in Sources */,
 				1669E53B166ED05F00C535A9 /* ViewController.m in Sources */,
@@ -449,6 +476,7 @@
 		1669E554166ED05F00C535A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yohan Frans (2929FN3KFH)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -466,6 +494,7 @@
 		1669E555166ED05F00C535A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yohan Frans (2929FN3KFH)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
