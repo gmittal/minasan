@@ -1,0 +1,14 @@
+APNSWrapper==0.6.1
+Flask==0.10.1
+Jinja2==2.7.3
+MarkupSafe==0.23
+Werkzeug==0.9.6
+docutils==0.12
+gunicorn==19.0.0
+httplib2==0.9
+itsdangerous==0.24
+-e git://github.com/mikexstudios/python-firebase.git@fc0597aafb1cb83c76e039370b1e0e180322f0e0#egg=python_firebase-master
+requests==1.2.3
+six==1.7.3
+twilio==3.6.6
+wsgiref==0.1.2
