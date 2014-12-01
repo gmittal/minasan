@@ -4,9 +4,9 @@ Minasan Messenger
 Minasan is a simple WhatsApp-like messenger service that allows SMS users to chat with iOS users as if it were a normal WhatsApp conversation (kind of like GroupMe). The service relies on Firebase and Twilio.<br /><br />
 <b>Required Dependencies:</b><br />
 <ol>
-<li>Bird</li>
-<li>McHale</li>
-<li>Parish</li>
+<li>Twilio Python REST Client Helper Library</li>
+<li>Flask</li>
+<li>python-firebase</li>
 </ol>
 <br /><br />
 <center>
