@@ -29,10 +29,15 @@
 		0A718B681959E9EA00EADD8B /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A718B5E1959E9EA00EADD8B /* purple.png */; };
 		0A718B691959E9EA00EADD8B /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A718B5F1959E9EA00EADD8B /* yellow.png */; };
 		0AA32BE319799A4100211298 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AA32BE219799A4100211298 /* bar.png */; };
+<<<<<<< HEAD
+		0AAC6AD31A2EA7330004DF1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAC6AD21A2EA7330004DF1D /* Images.xcassets */; };
+=======
 		0ABAAE031986C0E2003B5882 /* ohhCity.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0ABAAE021986C0E2003B5882 /* ohhCity.jpg */; };
 		0ABAAE061986D02A003B5882 /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ABAAE051986D02A003B5882 /* TitleViewController.m */; };
 		0ABAAE081986D298003B5882 /* realCity.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ABAAE071986D298003B5882 /* realCity.png */; };
+>>>>>>> FETCH_HEAD
 		0AEC26201968EF6F00D832CF /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC261F1968EF6F00D832CF /* WelcomeViewController.m */; };
+		0AF6B6B31A409009005C18EF /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9A7E4116F7C6F100030E3E /* Firebase.framework */; };
 		1669E51C166ED05F00C535A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51B166ED05F00C535A9 /* UIKit.framework */; };
 		1669E51E166ED05F00C535A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51D166ED05F00C535A9 /* Foundation.framework */; };
 		1669E520166ED05F00C535A9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1669E51F166ED05F00C535A9 /* CoreGraphics.framework */; };
@@ -51,7 +56,6 @@
 		16DAC9DD167287D400A2B44D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9DC167287D400A2B44D /* libicucore.dylib */; };
 		16DAC9DF167287DD00A2B44D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9DE167287DD00A2B44D /* Security.framework */; };
 		16DAC9E1167287E400A2B44D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DAC9E0167287E400A2B44D /* CFNetwork.framework */; };
-		ED9A7E4216F7C6F100030E3E /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9A7E4116F7C6F100030E3E /* Firebase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,10 +91,14 @@
 		0A718B5E1959E9EA00EADD8B /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purple.png; sourceTree = "<group>"; };
 		0A718B5F1959E9EA00EADD8B /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
 		0AA32BE219799A4100211298 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		0AAC6AD21A2EA7330004DF1D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+=======
 		0ABAAE021986C0E2003B5882 /* ohhCity.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ohhCity.jpg; sourceTree = "<group>"; };
 		0ABAAE041986D02A003B5882 /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
 		0ABAAE051986D02A003B5882 /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
 		0ABAAE071986D298003B5882 /* realCity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realCity.png; sourceTree = "<group>"; };
+>>>>>>> FETCH_HEAD
 		0AEC261E1968EF6F00D832CF /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		0AEC261F1968EF6F00D832CF /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		1669E517166ED05F00C535A9 /* Firechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,13 +132,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1669E51E166ED05F00C535A9 /* Foundation.framework in Frameworks */,
 				16DAC9E1167287E400A2B44D /* CFNetwork.framework in Frameworks */,
 				16DAC9DF167287DD00A2B44D /* Security.framework in Frameworks */,
 				16DAC9DD167287D400A2B44D /* libicucore.dylib in Frameworks */,
 				1669E51C166ED05F00C535A9 /* UIKit.framework in Frameworks */,
-				1669E51E166ED05F00C535A9 /* Foundation.framework in Frameworks */,
 				1669E520166ED05F00C535A9 /* CoreGraphics.framework in Frameworks */,
-				ED9A7E4216F7C6F100030E3E /* Firebase.framework in Frameworks */,
+				0AF6B6B31A409009005C18EF /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +203,7 @@
 				1669E522166ED05F00C535A9 /* Supporting Files */,
 				16D044E216718E13006D1FC5 /* UITouchTableView.h */,
 				16D044E316718E13006D1FC5 /* UITouchTableView.m */,
+				0AAC6AD21A2EA7330004DF1D /* Images.xcassets */,
 			);
 			path = Firechat;
 			sourceTree = "<group>";
@@ -316,6 +325,7 @@
 				1669E526166ED05F00C535A9 /* InfoPlist.strings in Resources */,
 				0A718B691959E9EA00EADD8B /* yellow.png in Resources */,
 				1669E52E166ED05F00C535A9 /* Default.png in Resources */,
+				0AAC6AD31A2EA7330004DF1D /* Images.xcassets in Resources */,
 				1669E530166ED05F00C535A9 /* Default@2x.png in Resources */,
 				0A718B671959E9EA00EADD8B /* pink.png in Resources */,
 				0AA32BE319799A4100211298 /* bar.png in Resources */,
@@ -476,10 +486,20 @@
 		1669E554166ED05F00C535A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+<<<<<<< HEAD
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv6",
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+=======
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yohan Frans (2929FN3KFH)";
+>>>>>>> FETCH_HEAD
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Firechat/Firechat-Prefix.pch";
@@ -487,6 +507,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -494,10 +515,20 @@
 		1669E555166ED05F00C535A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+<<<<<<< HEAD
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					"armv7,armv6",
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+=======
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yohan Frans (2929FN3KFH)";
+>>>>>>> FETCH_HEAD
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Firechat/Firechat-Prefix.pch";
@@ -505,6 +536,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
