@@ -4,7 +4,7 @@ Jinja2==2.7.3
 MarkupSafe==0.23
 Werkzeug==0.9.6
 docutils==0.12
-gunicorn==19.0.0
+gunicorn==19.5.0
 httplib2==0.9
 itsdangerous==0.24
 -e git://github.com/mikexstudios/python-firebase.git@fc0597aafb1cb83c76e039370b1e0e180322f0e0#egg=python_firebase-master
